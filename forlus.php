@@ -1,7 +1,12 @@
 <?php
 
-for($i =0; $i<10; $i++){
-    echo "dit is ronde $i\n";
+$begin = 1;
+$maximum = 10;
+$text = "hallo dit is ronde ";
+
+for($teller=$begin; $teller<=$maximum; $teller++){
+    echo $text;
+    echo "$teller\n";
 
 }
 
