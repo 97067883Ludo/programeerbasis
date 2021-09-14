@@ -1,9 +1,10 @@
 <?php
-$random = rand(1,100);
-$rangeTop = 100;
-$rangeBottom = 0;
-$kansen =3;
-echo "raad het getal tussen 1 en 100 u mag 3 keer raden\n\n";
+$rangeTop = 25;
+$rangeBottom = 20;
+$kansen =4;
+
+$random = rand($rangeBottom, $rangeTop);
+echo "\n\nraad het getal tussen $rangeBottom en $rangeTop u mag $kansen keer raden\n\n";
 
 
 for($i =1; $i<=$kansen; $i++){
@@ -14,12 +15,12 @@ for($i =1; $i<=$kansen; $i++){
     }
 
     if($gekozengetal > $rangeTop){
-        echo "het getal mag niet groter zijn dan 100";
+        echo "het getal mag niet groter zijn dan $rangeTop";
         exit();
     }
 
-    if($gekozengetal <=$rangeBottom){
-        echo "het getal mag niet kleinier of gelijk zijn aan 0";
+    if($gekozengetal < $rangeBottom){
+        echo "het getal mag niet kleinier of gelijk zijn aan $rangeBottom";
         exit();
     }
 
